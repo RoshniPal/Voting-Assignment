@@ -1,0 +1,133 @@
+<!DOCTYPE html> 
+<head>
+    <title>Department</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="css/dept.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+   <script type="text/javascript">
+   
+        $(document).ready(function(){
+        $(".formelements").css('opacity',0);
+        $(".choose").click(function(){
+        var id = $(this).attr('id');
+        console.log(id);
+
+        $("li").addClass("blur");
+        $("#"+id).removeClass("blur");
+        $(".formelements").css('opacity',1);
+        console.log("blur removed from id"+id);
+        $("#mascotname").html(id);
+       });
+           $("button").prop('disabled', true);
+            var toValidate = $('#suggestion, #reasonip'),
+            valid = false;
+        
+            toValidate.keyup(function () {
+            if ($(this).val().length > 0) {
+               $(this).data('valid', true);
+            } else {
+                $(this).data('valid', false);
+            }
+            toValidate.each(function () {
+                if ($(this).data('valid') == true) {
+                    valid = true;
+                } else {
+                    valid = false;
+                }
+            });
+            if (valid === true) {
+                $("button").prop('disabled', false);
+                $("button").css("background-color","green");
+            } else {
+               
+                $("button").prop('disabled', true);
+              
+            }
+            });
+        });
+   
+</script>
+</head>
+<body>
+        <div class= "Navbar one-edge-shadow" >
+                <img src="img/quantiphi-logo1.png" alt="quantiphi-logo" id="logo">
+        </div>
+        <div class="main">
+            <div class="dept-detail">
+                <h3>Department: Facilities</h3>
+                <div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat urna nec quam convallis, ut mollis <br>
+                    dui vulputate. Sed id turpis vitae lacus porta aliquet lobortis quis nisi. Ut eget mollis odio.
+                    </p>
+                    <button  onClick="location.href='dept.html';">Move To The Next Department</button>
+                </div>
+                
+            </div>
+            
+    
+            <p class="p-choose"><b>Choose your mascot for this department </b>(hover over each mascot to know it’s meaning).</p>
+    
+            <div class="icons"> 
+                <ul>
+                    <li id="Oyster" class="choose" ><div  id="oyester" class="tooltip"><span class="tooltiptext">My work/the attributes initiative is not having direction and needs greater mentorship or leadership</span></div><span>World is my Oyster</span></li>
+                    <li id="Cat" class="choose" ><div  id="cat"  class="tooltip"><span class="tooltiptext">My work/the attributes initiative is not having direction and needs greater mentorship or leadership</span></div><span>Cat’s Meow</span></li>
+                    <li id="Whale" class="choose" ><div  id="whale"  class="tooltip"><span class="tooltiptext">My work/the attributes initiative is not having direction and needs greater mentorship or leadership</span></div><span>Whale of a time</span></li>
+                    <li id="Elephant" class="choose"> <div  id="elephant"  class="tooltip"><span class="tooltiptext">My work/the attributes initiative is not having direction and needs greater mentorship or leadership</span></div><span>Elephant in the room</span></li>
+                    <li id="Dead_Fish" class="choose" ><div  id="fish"  class="tooltip" ><span class="tooltiptext">My work/the attributes initiative is not having direction and needs greater mentorship or leadership</span></div><span>Dead Fish</span></li>
+                    <li id="Wild_Goose_Chase"  class="choose" ><div  id="goose"  class="tooltip" ><span class="tooltiptext">My work/the attributes initiative is not having direction and needs greater mentorship or leadership</span></div><span>Wild Goose Chase</span></li>
+                </ul>
+            </div>
+            <form action="" class="formelements" >
+                <div class="eform">
+                    <h4>Overall Rating for Facilities (1 -lowest, 5-highest)</h4>
+                    <div class="rate">
+                        <input type="radio" id="star5" name="rate" value="5" />
+                        <label for="star5" title="text">5 stars</label>
+                        <input type="radio" id="star4" name="rate" value="4" />
+                        <label for="star4" title="text">4 stars</label>
+                        <input type="radio" id="star3" name="rate" value="3" />
+                        <label for="star3" title="text">3 stars</label>
+                        <input type="radio" id="star2" name="rate" value="2" />
+                        <label for="star2" title="text">2 stars</label>
+                        <input type="radio" id="star1" name="rate" value="1" />
+                        <label for="star1" title="text">1 star</label>
+                    </div>
+                    <h4 id="selectedmascot">Share your reasons for selecting <span id="mascotname"></span></h4>
+                    <label class="container">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsa
+                    <input type="checkbox" id="check" checked="checked">
+                    <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsa
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsa
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsa
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div  class="eform">
+                        <h4 id="h4-reason">Any more reasons?</h4>
+                        <input class = "input-reason" type="text" id="reasonip" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan" /><br>
+                        <input class = "input-reason" type="text" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan" /> <br>
+                        <input class = "input-reason" type="text" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan" /><br>
+                        <input class = "input-reason" type="text" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan" /><br>
+                        <input class = "input-reason" type="text" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan" /><br>
+                        <input class = "input-reason" type="text" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan" /><br>
+                </div>
+                <div  class="eform">
+                    <h4>Suggestions</h4>
+                    <textarea name="suggestion" id="suggestion" cols="30" rows="12"></textarea>
+                </div>
+                
+            </form>
+            <button id = "next-dept" onClick="location.href='dept.html';">Move To The Next Department</button>
+        </div>   
+</body>
+</html>
