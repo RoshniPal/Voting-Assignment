@@ -9,6 +9,10 @@ body,html{
     height: 100%;
     font-family: "Josefin Sans";
 }
+.bghome{
+    background: url(../img/backgroundimg.jpeg) no-repeat;
+    background-size: cover;
+}
 .main{
     margin: 10px 50px;
     font-family: "Josefin Sans";
@@ -212,6 +216,7 @@ input[type="text"]
     box-sizing: border-box;
     font-size: 12px;
     height: 15px;
+    background: transparent;
 }
 input[type="text"]:focus{
     border-bottom: 1px solid rgb(116, 116, 116);;

@@ -8,6 +8,11 @@ body{
     width: 100%;
     height: 100%;
 }
+
+.bghome{
+    background: url(../img/backgroundimg.jpeg) no-repeat;
+    background-size: cover;
+}
 .Navbar{
     background-color: white;  
     height: 60px;    

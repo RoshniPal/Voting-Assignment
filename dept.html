@@ -9,14 +9,14 @@
    <script type="text/javascript">
    
         $(document).ready(function(){
-        $(".formelements").css('opacity',0);
+        $(".formelements").hide();
         $(".choose").click(function(){
         var id = $(this).attr('id');
         console.log(id);
 
         $("li").addClass("blur");
         $("#"+id).removeClass("blur");
-        $(".formelements").css('opacity',1);
+        $(".formelements").show();
         console.log("blur removed from id"+id);
         $("#mascotname").html(id);
        });
@@ -50,7 +50,7 @@
    
 </script>
 </head>
-<body>
+<body class="bghome">
         <div class= "Navbar one-edge-shadow" >
                 <img src="img/quantiphi-logo1.png" alt="quantiphi-logo" id="logo">
         </div>
